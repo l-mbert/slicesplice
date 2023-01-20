@@ -48,9 +48,9 @@ export default function Home() {
           </Highlight>
           <p className={styles.paragraph}>What can we do with slice(...)?</p>
           <Highlight className="language-javascript">
-            {`const firstTwoTodos = todos.slice(0, 2);
+            {`const sliceResult = todos.slice(0, 2);
 
-console.log(firstTwoTodos); 
+console.log(sliceResult); 
 // Output: ["Follow @ThePrimeagen on Twitter", "Watch Theos newest video"]
 
 console.log(todos); 
@@ -64,7 +64,10 @@ console.log(todos);
             And now splice(...)
           </p>
           <Highlight className="language-javascript">
-            {`tasks.splice(2, 1, 'Call Elon');
+            {`const spliceResult = tasks.splice(2, 1, 'Call Elon');
+
+console.log(spliceResult);
+// Output: ["Learn the difference between slice and splice"]
 
 console.log(tasks);
 // Output: ["Follow @ThePrimeagen on Twitter", "Watch Theos newest video", "Call Elon"]
